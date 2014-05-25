@@ -3,6 +3,18 @@ Blog for GitHub
 
 This is a blog for GitHub pages. You just have to [fork][0] this project and modify the configurations files to have your **own** blog.
 
+ > First : you have to modify in the **index.html** the line
+```html
+ <base href="http://gwivv.github.io/gh-blog/">
+```
+By your own github page url :
+```html
+ <base href="http://[your.github.username].github.io/gh-blog/">
+```
+
+For more informations about gh-pages, go [there][gh-pages].
+
+
 Structure for personalize **your** blog :
 ---
 
@@ -20,6 +32,7 @@ config
     |---theme.css       -> the css for customize theme
 ```
 
+
 The **site.json** file
 ---
 
@@ -33,6 +46,7 @@ This is the principal file of configuration where you can activate or disable ea
  * If you don't want **skills** on Home / CV, just pass the attribute to false.
  * If you don't want to see menu for **cv** and / or **blog**, just pass the attribute to false.
  * If you don't want **picture** on Home, just delete the **picture** attribute, same for **descriptions**.
+
 
 Personalize your picture
 ---
@@ -57,6 +71,7 @@ You have three choices for your picture :
         "gravatar":"github@mail.com"
     }
     ```
+
 
 Your CV
 ---
@@ -86,6 +101,7 @@ Add an entry in the **blog.json** file like example :
 
 Create a new file to the path and write your article.
 
+
 Configure Disqus
 ---
 
@@ -98,6 +114,7 @@ And add your username to the **site.json** file :
 },
 ```
 
+
 Customize Markdown text
 ---
 
@@ -107,6 +124,7 @@ Just change the css file in attribute **cssMarkdown** :
 ```
 
  > **Tip** : List of different files are inside folder **/bower_components/highlightjs/styles/**.
+
 
 More informations about the project
 ---
@@ -119,10 +137,12 @@ More informations about the project
  * Generated with Node.JS and Grunt/Bower/Yo.
 
 
+
 Sources
 ---
 
 The sources of project can be found [here][5] and the demo is [here][6].
+
 
 License
 ---
@@ -148,6 +168,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+ 
+ [gh-pages]: https://pages.github.com/
  [0]: https://github.com/Gwivv/gh-blog/fork
  [1]: https://angularjs.org/
  [2]: http://getbootstrap.com/css/
