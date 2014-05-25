@@ -13,7 +13,7 @@
         "country": "Country",
         "mail": "github@mail.com",
         "picture": {
-            "img":"/images/me.jpg",
+            "img":"images/me.jpg",
             "github":"github",
             "gravatar":"github@mail.com"
         },
