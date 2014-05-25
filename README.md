@@ -32,7 +32,7 @@ This is the principal file of configuration where you can activate or disable ea
 
  * If you don't want **skills** on Home / CV, just pass the attribute to false.
  * If you don't want to see menu for **cv** and / or **blog**, just pass the attribute to false.
- * If you don't want **picture** on Home, just delete the **"picture"** attribute, same for **descriptions**.
+ * If you don't want **picture** on Home, just delete the **picture** attribute, same for **descriptions**.
 
 Personalize your picture
 ---
@@ -89,7 +89,7 @@ Create a new file to the path and write your article.
 Configure Disqus
 ---
 
-Go to the [site][3] and register a new profile if you want to add disqus to your blog.
+Go to the [site][4] and register a new profile if you want to add disqus to your blog.
 
 And add your username to the **site.json** file :
 ```
