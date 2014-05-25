@@ -1,0 +1,64 @@
+{
+    "cv": {
+        "experiences" : [
+            {
+                "title":"My first experience",
+                "startDate" : {
+                    "month" : "Mai",
+                    "year" : "2014"
+                },
+                "endDate" : {
+                    "today" : "Today"
+                },
+                "company" : "GitHub",
+                "client" : "GitHub",
+                "missions" : [
+                    "My first mission",
+                    "My second mission",
+                    "Other mission"
+                ],
+                "skills" : "Skill 1, Skill 2, Skill 3, Skill 4"
+            },
+            {
+                "title":"Before",
+                "startDate" : {
+                    "month" : "February",
+                    "year" : "2014"
+                },
+                "endDate" : {
+                    "month" : "Mai",
+                    "year" : "2014"
+                },
+                "company" : "Other company",
+                "missions" : [
+                    "My first mission",
+                    "Other mission"
+                ]
+            }
+        ],
+        "formations" : [
+            {
+                "title" : "My formation",
+                "startDate" : {
+                    "month" : "September",
+                    "year" : "2010"
+                },
+                "endDate" : {
+                    "month" : "June",
+                    "year" : "2013"
+                },
+                "formation" : "Title of my formation",
+                "description" : "Description of my formation"
+            }
+        ],
+        "links" : {
+            "Facebook" : "",
+            "Twitter" : "",
+            "Google+" : "",
+            "Github" : "https://github.com/Gwivv",
+            "Viadeo" : "",
+            "doyoubuzz" : "",
+            "Remix jobs" : ""
+        }
+    }
+}

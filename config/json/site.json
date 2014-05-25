@@ -1,0 +1,37 @@
+{
+    "site": {
+        "language" : "en",
+	    "logo" : "<div class='test'>LOGO</div>",
+        "title":{
+            "en":"My GitHub blog",
+            "fr":"Mon blog GitHub"
+        },
+        "name": "Name",
+        "lastname": "LastName",
+        "birthday": "05/24/1990",
+        "town": "Town",
+        "country": "Country",
+        "mail": "github@mail.com",
+        "picture": {
+            "img":"/images/me.jpg",
+            "github":"github",
+            "gravatar":"github@mail.com"
+        },
+        "disqus" : {
+            "shortname":"github"
+        },
+        "descriptions": {
+            "en": [
+                "There is my GitHub blog."
+            ],
+            "fr": [
+                "Voici mon blog GitHub."
+            ]
+        },
+        "footer":"♥ GitHub",
+        "cssMarkdown" : "github.css",
+        "skills":true,
+        "cv":true,
+        "blog":true
+    }
+}

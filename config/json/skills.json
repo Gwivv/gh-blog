@@ -1,0 +1,29 @@
+{
+    "skills" : [
+        {
+            "name" : "Skill 1",
+            "level" : 95,
+            "color" : "#D358F7"
+        }, {
+            "name" : "Skill 2",
+            "level" : 80,
+            "color" : "#5858FA"
+        }, {
+            "name" : "Skill 3",
+            "level" : 70,
+            "color" : "#58FAF4"
+        }, {
+            "name" : "Skill 4",
+            "level" : 60,
+            "color" : "#58FA58"
+        }, {
+            "name" : "Skill 5",
+            "level" : 50,
+            "color" : "#FAAC58"
+        }, {
+            "name" : "Skill 6",
+            "level" : 40,
+            "color" : "#FA5858"
+        }
+    ]
+}

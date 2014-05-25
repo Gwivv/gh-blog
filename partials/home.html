@@ -1,0 +1,44 @@
+<!-- include header -->
+<div ng-include="'partials/header.html'"></div>
+
+<div class="row">
+    <div ng-if="hasInfos" class="about" ng-class="{'col-md-4':hasInfos&&hasSkills,'col-md-12':hasInfos}">
+        <span class="glyphicon glyphicon-user"></span>
+        <h3 i18n class="glyphicon-title">About me</h3>
+        <span>
+            <img ng-if="hasPicture" me alt="me" class="img-thumbnail"/>
+            <p ng-if="hasDescriptions" ng-repeat="description in descriptions">{{description}}</p>
+        </span>
+    </div>
+    <div ng-if="hasSkills" ng-class="{'col-md-8':hasInfos&&hasSkills,'col-md-12':hasSkills}">
+        <span class="glyphicon glyphicon-cog"></span>
+        <h3 i18n class="glyphicon-title">Skills</h3>
+        <ul id="mySkills" class="skills">
+            <li ng-repeat="skill in mySkills" repeat-skills>
+                <span skills skills-color="{{skill.color}}" skills-level="{{skill.level}}" class="skill-loading"></span>
+                <span>{{skill.name}}</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="row spacing">
+    <div ng-if="hasBlog" class="col-md-12">
+        <div class="jumbotron">
+            <span class="glyphicon glyphicon-pushpin"></span>
+            <h3 i18n>From the blog</h3>
+            <hr/>
+            <div class="clearfix" ng-repeat="article in articles">
+                <div class="col-xs-8 ellipsis">
+                    <a screen-href="articles/{{article.id}}">{{article.title}}</a>
+                </div>
+                <div class="col-xs-4 text-right">
+                    {{article.date | date:'dd/MM/yyyy'}}
+                </div>
+            </div>
+            <p class="spacing text-center"><a class="btn btn-default" screen-href="articles" role="button" i18n>View details</a></p>
+        </div>
+    </div>
+</div>
+
+<div ng-include="'partials/footer.html'"></div>

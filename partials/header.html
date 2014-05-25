@@ -1,0 +1,15 @@
+<div class="header clearfix" ng-controller="HeaderCtrl">
+  <ul class="nav nav-pills pull-right">
+    <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}" repeat-i18n="">
+        <a screen-href="{{item.link}}" ng-click="resetMessages()" i18n="">{{item.title}}</a>
+    </li>
+  </ul>
+  <div class="logo">
+    <div class="perso" ng-bind-html="header.logo"></div>
+    <div class="mail"><a class="glyphicon glyphicon-envelope" ng-href="mailto:{{header.mail}}"><p>{{header.mail}}</p></a></div>
+  </div>
+  <div class="row">
+      <h1>{{header.name}} {{header.lastname}}, <span age="{{header.birthday}}"></span></h1>
+      <h3 i18n="">{{header.title}}, {{header.town}} {{header.country}}</h3>
+  </div>
+</div>

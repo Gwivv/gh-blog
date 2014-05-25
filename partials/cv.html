@@ -1,0 +1,89 @@
+<!-- include header -->
+<div ng-include="'partials/header.html'"></div>
+
+<div class="row">
+    <div ng-class="{'col-md-8':hasSkills||hasLinks,'col-md-12':!hasSkills&&!hasLinks}">
+        <!-- cv -->
+        <div>
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <h3 i18n>Experiences</h3>
+            <hr/>
+            <!--  title,startDate,endDate,company,client,missions,skills-->
+            <div class="jumbotron" ng-repeat="experience in experiences">
+                <h3>{{experience.title}}</h3>
+                <p class="text-muted">{{experience.company}}</p>
+                <p class="text-muted">{{experience.client}}</p>
+                <div class="text-muted block">
+                    <p>{{experience.startDate.month}}</p>
+                    <p>{{experience.startDate.year}}</p>
+                    <p>-</p>
+                    <p>{{experience.endDate.today}}</p>
+                    <p>{{experience.endDate.month}}</p>
+                    <p>{{experience.endDate.year}}</p>
+                </div>
+                <h4>Missions</h4>
+                <ul class="missions">
+                    <li ng-repeat="mission in experience.missions">
+                        {{mission}}
+                    </li>
+                </ul>
+                <p>{{experience.skills}}</p>
+                <hr/>
+            </div>
+        </div>
+        <div>
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <h3 i18n>Formations</h3>
+            <hr/>
+            <!--  title,startDate,endDate,formation,description-->
+            <div class="jumbotron" ng-repeat="formation in formations">
+                <h3>{{formation.title}}</h3>
+                <div class="text-muted block">
+                    <p>{{formation.startDate.month}}</p>
+                    <p>{{formation.startDate.year}}</p>
+                    <p>-</p>
+                    <p>{{formation.endDate.month}}</p>
+                    <p>{{formation.endDate.year}}</p>
+                </div>
+                <p>{{formation.formation}}</p>
+                <h4>Description de la formation</h4>
+                <p>{{formation.description}}</p>
+                <hr/>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4" ng-if="hasSkills||hasLinks">
+        <!-- compétences -->
+        <div ng-if="hasSkills">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <h3 i18n>Skills</h3>
+            <hr/>
+            <ul id="myStars" class="jumbotron myStars">
+                <li ng-repeat="skill in mySkills" repeat-stars>
+                    <p>{{skill.name}}</p>
+                    <span stars stars-color="{{skill.color}}" stars-level="{{skill.level}}"></span>
+                </li>
+            </ul>
+        </div>
+        <!-- Links -->
+        <div ng-if="hasLinks">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <h3 i18n>Links</h3>
+            <hr/>
+            <ul class="jumbotron">
+                <li ng-repeat="link in links">
+                    <a class="external" href="{{link.href}}">{{link.title}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- scrollTopButton -->
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-default" scroll-top-button i18n>Top</button>
+    </div>
+</div>
+
+<div ng-include="'partials/footer.html'"></div>

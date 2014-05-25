@@ -1,0 +1,56 @@
+<!-- include header -->
+<div ng-include="'partials/header.html'"></div>
+
+<!-- Messages -->
+<div ng-if="errorMsg != ''" class="btn-danger">
+    {{errorMsg}}
+</div>
+
+<!-- Filters / pagination -->
+<div class="row spacing">
+    <div class="col-md-12">
+        <div class="filters">
+            <p i18n="">Sort</p>
+            <p> : </p>
+            <a ng-click="sorting = 'title'; reverse=!reverse" i18n="">Title</a>
+            <p> | </p>
+            <a ng-click="sorting = 'date'; reverse=!reverse" i18n="">Date</a>
+            <p pagination="" items="articles"></p>
+        </div>
+    </div>
+</div>
+
+<!-- blog -->
+<div class="row">
+    <div class="col-md-12">
+        <h3>
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span i18n="">{{title}}</span>
+            <span> ({{total}})</span>
+        </h3>
+        <hr>
+        <div ng-repeat="article in pageItems(sorting,reverse)" repeat-i18n="">
+            <div class="jumbotron">
+                <div>
+                    <div class="block">
+                        <p class="right">{{article.date | date:'dd/MM/yyyy'}}</p>
+                    </div>
+                    <div class="text short" transform-markdown="{{article.file}}" css-markdown="{{cssMarkdown}}">
+                        <div class="row text-center"><span class="glyphicon glyphicon-refresh spin"></span></div>
+                    </div>
+                    <p class="text-center ellipsis"><a class="btn btn-primary btn-lg" role="button" screen-href="articles/{{article.id}}" i18n="">Read more</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- scrollTopButton -->
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-default" scroll-top-button="" i18n="">Top</button>
+    </div>
+</div>
+
+<!-- include footer -->
+<div ng-include="'partials/footer.html'"></div>
