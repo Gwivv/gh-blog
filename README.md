@@ -5,7 +5,7 @@ This is a blog for GitHub pages. You just have to [fork][0] this project and mod
 
  > First : you have to modify in the **index.html** the line
 ```html
- <base href="http://gwivv.github.io/gh-blog/">
+ <base href="http://yoannb.github.io/gh-blog/">
 ```
 By your own github page url :
 ```html
@@ -170,10 +170,10 @@ SOFTWARE.
 
  
  [gh-pages]: https://pages.github.com/
- [0]: https://github.com/Gwivv/gh-blog/fork
+ [0]: https://github.com/YoannB/gh-blog/fork
  [1]: https://angularjs.org/
  [2]: http://getbootstrap.com/css/
  [3]: http://fr.wikipedia.org/wiki/Markdown
  [4]: http://disqus.com/
- [5]: https://github.com/Gwivv/gh-blog
- [6]: http://gwivv.github.io/gh-blog
+ [5]: https://github.com/YoannB/gh-blog
+ [6]: http://yoannb.github.io/gh-blog
